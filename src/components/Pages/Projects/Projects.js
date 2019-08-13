@@ -1,4 +1,5 @@
 import React from "react"
+import { Link } from "react-router-dom"
 import { dummyData } from "./dummyData"
 import "../../../main.css"
 import "./Projects.css"
@@ -32,7 +33,9 @@ const Projects = () => {
                 {dummyData.map(project => {
                     return (
                         <div className="page__project">
-                            <div className="page__project--content"></div>
+                            <Link to="/projects/project">
+                                <div className="page__project--content"></div>
+                            </Link>
                         </div>
                     )
                 })}

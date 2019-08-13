@@ -1,0 +1,18 @@
+.tech-stack {
+  width: 40vw;
+  margin-top: 3rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  grid-gap: 1rem;
+}
+
+.icon-container {
+  max-width: 100px;
+  max-height: 100px;
+}
+
+.icon {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}

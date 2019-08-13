@@ -1,0 +1,32 @@
+.content {
+  display: flex;
+  justify-content: space-around;
+  margin: 1rem;
+}
+
+.name-and-link {
+  display: flex;
+  margin-bottom: 1rem;
+}
+
+.git-link {
+  margin-left: 2rem;
+}
+
+.info {
+  width: 40vw;
+  height: 40vh;
+  overflow:scroll;
+  line-height: 2rem;
+}
+
+.project-thumbnail {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 320px;
+  height: 320px;
+  box-shadow: 4px 10px 30px rgba(0, 0, 0, 0.18);
+  border-radius: 10px;
+  margin-top: 5rem;
+}
