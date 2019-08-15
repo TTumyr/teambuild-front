@@ -5,7 +5,7 @@ import ProjectNavbar from "./ProjectNavbar/ProjectNavbar"
 import ProjectInfo from "./ProjectInfo/ProjectInfo"
 import ProjectTechStack from "./ProjectTechStack/ProjectTechStack"
 import ProjectContributors from "./ProjectContributors/ProjectContributors"
-import ProjectApplication from "./ProjectApplication/ProjectApplication"
+import ProjectRecruitment from "./ProjectRecruitment/ProjectRecruitment"
 import ProjectFooter from "./ProjectFooter/ProjectFooter"
 
 
@@ -22,20 +22,21 @@ const ProjectDetails = ({id = 16}) => {
 
   if (currentProject) {
     const tech_stack = JSON.parse(currentProject.tech_stack)
+    console.log(currentProject)
     return (
-      <div>
+      <div className='project-details'>
         <ProjectNavbar />
-        <div className="inner-container">
+        <div className="project-container">
           <ProjectInfo project={currentProject} />
           <ProjectTechStack tech_stack={tech_stack} />
-          <ProjectContributors />
-          <ProjectApplication />
-          <ProjectFooter />
+          <ProjectContributors contributors={currentProject.contributors_num}/>
+          <ProjectRecruitment />
         </div>
+        <ProjectFooter />
       </div>
     )
   } else {
-    return <div className='content'><Loader /></div>
+    return <div className='loader'><Loader /></div>
   }
 }
 

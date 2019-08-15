@@ -4,7 +4,7 @@ import './ProjectFooter.css'
 const ProjectFooter = () => (
   <div className="footer-content">
     <h3>Made by community development</h3>
-    <span className="copyright">Copyright &#9400; 2019</span>
+    <p className="copyright">Copyright &#9400; 2019</p>
   </div>
 )
 

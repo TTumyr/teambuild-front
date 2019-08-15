@@ -3,7 +3,7 @@ import GitIcon from '../../../../static/github_icon.png';
 import './ProjectInfo.css';
 
 const ProjectInfo = ({ project }) => (
-  <div className='content'>
+  <div className='project-content'>
     <div className="project-info">
       <div className="name-and-link">
         <h2 className="project-name">{project.name}</h2>

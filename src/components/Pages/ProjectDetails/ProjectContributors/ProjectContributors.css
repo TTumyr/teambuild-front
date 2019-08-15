@@ -1,0 +1,24 @@
+.members-container {
+  grid-column: 3/4;
+  grid-row: 2/3;
+  margin: 3rem;
+}
+
+.members {
+  width: 35vw;
+  margin-top: 3rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+  grid-gap: 1rem;
+}
+
+.member-container {
+  max-width: 60px;
+  max-height: 60px;
+}
+
+.member {
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+}
