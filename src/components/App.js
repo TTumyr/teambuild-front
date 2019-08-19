@@ -6,6 +6,7 @@ import Dashboard from "./Pages/Dashboard/Dashboard"
 import Register from "./Pages/Register/Register"
 import Apply from "./Pages/Apply/Apply"
 import ViewProjects from "./Pages/ViewProjects/ViewProjects"
+import NewProject from "./Pages/NewProject/NewProject"
 import ProjectDetails from "./Pages/ProjectDetails/ProjectDetails"
 import auth from "../utils/Auth"
 import { PrivateRoute } from "../PrivateRoute"
@@ -31,6 +32,7 @@ const App = ({ hideLoader }) => {
                     <Route path="/signin" exact component={SignIn} />
                     <Route path="/apply" exact component={Apply} />
                     <Route exact path="/projects" component={ViewProjects} />
+                    <Route exact path="/projects/new" component={NewProject} />
                     <Route exact path="/projects/project" component={ProjectDetails} />
                 </Switch>
             </BrowserRouter>
