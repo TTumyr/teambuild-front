@@ -11,12 +11,20 @@ import ProjectFooter from "./ProjectFooter/ProjectFooter"
 
 const ProjectDetails = ({id = 16}) => {
   const [ currentProject, setCurrentProject ] = useState(null);
+  const [ contributors, setContributors ] = useState([])
 
   useEffect(() => {
     fetch(`http://localhost:5000/project/${id}`)
     .then(res => res.json())
     .then(project => {
       setCurrentProject(project[0])
+    })
+    .then(res => {
+      fetch(`http://localhost:5000/project/${id}/contributors`)
+      .then(res => res.json())
+      .then(contributors => {
+        setContributors(contributors)
+      })
     })
   }, []);
 
@@ -29,7 +37,7 @@ const ProjectDetails = ({id = 16}) => {
         <div className="project-container">
           <ProjectInfo project={currentProject} />
           <ProjectTechStack tech_stack={tech_stack} />
-          <ProjectContributors contributors={currentProject.contributors_num}/>
+          <ProjectContributors contributors={contributors}/>
           <ProjectRecruitment />
         </div>
         <ProjectFooter />

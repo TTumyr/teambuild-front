@@ -6,9 +6,10 @@ const ProjectContributors = ({ contributors }) => (
     <h3>Members</h3>
     <div className='members'>
       {
-        [...Array(contributors)].map((contributor, i) => (
+        contributors.map((contributor, i) => (
           <div key={i} className="member-container">
             <img src={`/static/media/react-logo.af408a49.svg`} alt='contributor' className='member'/>
+            <p>{contributor[0].first_name + " " + contributor[0].last_name}</p>
           </div>
         ))
       }
