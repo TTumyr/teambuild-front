@@ -10,16 +10,13 @@ const UserPicture = ({user}) => {
      the necessary data buffer which will be compatible format as image source.
      **/
 
-    // Raw binary array converted into an object
-    //let imgObject = BConvert.uintToString(user[0].image.data)
-    let imgObject = BConvert.uintToString(user.image.data)
+    const binaryToJpeg = (data) => {
+        const imageObject = BConvert.uintToString(data)
+        const binary = BConvert.arrayBufferBase64(imageObject.buffer.data)
+        return `data:image/jpeg;base64,${binary}`
+    }
 
-    // Converting the image buffer data into a binary string
-    let bin = BConvert.arrayBufferBase64(imgObject.buffer.data)
-
-    // In order to display as an image need the data:image prefix
-    // The image is ready to use as a correct image source
-    const imgSrc = `data:image/jpeg;base64,${bin}`
+    const imgSrc = binaryToJpeg(user.image.data)
 
     return(
         <div className="img-container" >
