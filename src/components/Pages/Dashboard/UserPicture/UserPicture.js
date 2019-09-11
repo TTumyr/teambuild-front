@@ -11,10 +11,11 @@ const UserPicture = ({user}) => {
      **/
 
     // Raw binary array converted into an object
-    const imgObject = BConvert.uintToString(user.image.image.data)
+    //let imgObject = BConvert.uintToString(user[0].image.data)
+    let imgObject = BConvert.uintToString(user.image.data)
 
     // Converting the image buffer data into a binary string
-    const bin = BConvert.arrayBufferBase64(imgObject.buffer.data)
+    let bin = BConvert.arrayBufferBase64(imgObject.buffer.data)
 
     // In order to display as an image need the data:image prefix
     // The image is ready to use as a correct image source

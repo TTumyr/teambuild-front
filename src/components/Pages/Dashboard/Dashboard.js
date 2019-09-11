@@ -78,7 +78,7 @@ const Dashboard = () => {
 
                     </div>
 
-                    {/*<Uploader user={user} />*/}
+                    <Uploader user={user} />
 
                     <FriendsAndProjects />
 
