@@ -7,8 +7,6 @@ const Uploader = ({user}) => {
 
     const [image, setImage] = useState(null)
 
-    console.log(image)
-
     function imageUploader(e) {
         setImage(e.target.files[0])
     }
