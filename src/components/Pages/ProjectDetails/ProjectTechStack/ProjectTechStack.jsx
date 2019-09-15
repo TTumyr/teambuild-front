@@ -2,7 +2,7 @@ import React from 'react';
 import './ProjectTechStack.css';
 
 const ProjectTechStack = ({ tech_stack }) => (
-  <div className="inner-container">
+  <div className='tech-stack-container'>
     <h3>Tech Stack</h3>
     <div className='tech-stack'>
       {

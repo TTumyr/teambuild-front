@@ -1,0 +1,34 @@
+.project-recruitment {
+  grid-column: 1/-1;
+  grid-row: 3/4;
+  background: #F2F5FA;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.recruitment-roles {
+  display: flex;
+}
+
+.recruitment-roles div {
+  margin: 0 2rem;
+  padding: 1rem;
+  background: #FFFFFF;
+  border: 1px solid #DADADA;
+  box-sizing: border-box;
+  border-radius: 80px;
+  display: flex;
+}
+
+.apply-button {
+  width: 200px;
+  height: 56px;
+  background: #4EB9F4;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 22px;
+  line-height: 30px;
+  color: #FFFFFF;
+}

@@ -1,0 +1,20 @@
+.members-container {
+  grid-column: 3/4;
+  grid-row: 2/3;
+  margin: 3rem;
+}
+
+.members {
+  width: 35vw;
+  margin-top: 3rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(5vw, 1fr));
+  gap: 5px;
+}
+
+.member {
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+  border-radius: 50%;
+}
