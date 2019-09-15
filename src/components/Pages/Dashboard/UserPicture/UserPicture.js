@@ -1,6 +1,7 @@
 import React from "react"
 import "./UserPicture.css"
 import BConvert from "../../../../utils/BinaryConverter"
+import avatar from '../../../../static/profile_pic.jpg'
 
 const UserPicture = ({user}) => {
 
@@ -9,16 +10,13 @@ const UserPicture = ({user}) => {
      In order to make compatible as image, need to convert to an object and take only
      the necessary data buffer which will be compatible format as image source.
      **/
+    const binaryToJpeg = (data) => {
+        const imageObject = BConvert.uintToString(data)
+        const binary = BConvert.arrayBufferBase64(imageObject.buffer.data)
+        return `data:image/jpeg;base64,${binary}`
+    }
 
-    // Raw binary array converted into an object
-    const imgObject = BConvert.uintToString(user.image.image.data)
-
-    // Converting the image buffer data into a binary string
-    const bin = BConvert.arrayBufferBase64(imgObject.buffer.data)
-
-    // In order to display as an image need the data:image prefix
-    // The image is ready to use as a correct image source
-    const imgSrc = `data:image/jpeg;base64,${bin}`
+    const imgSrc = (user.image !== null) ? binaryToJpeg(user.image.data) : avatar
 
     return(
         <div className="img-container" >
