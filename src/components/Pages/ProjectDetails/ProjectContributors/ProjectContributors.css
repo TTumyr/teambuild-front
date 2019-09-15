@@ -9,16 +9,12 @@
   margin-top: 3rem;
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
-  grid-gap: 1rem;
-}
-
-.member-container {
-  max-width: 60px;
-  max-height: 60px;
+  gap: 5px;
 }
 
 .member {
   height: 100%;
   width: 100%;
   object-fit: contain;
+  border-radius: 50%;
 }
