@@ -1,5 +1,7 @@
 import React from 'react';
-import BConvert from "../../../../utils/BinaryConverter"
+import BConvert from '../../../../utils/BinaryConverter'
+
+import profilePic from '../../../../static/profile_pic.jpg'
 import './ProjectContributors.css';
 
 const ProjectContributors = ({ contributors }) => (
@@ -11,7 +13,7 @@ const ProjectContributors = ({ contributors }) => (
           if (contributor.length === 0 || contributor[0].image === null) {
             return (
               <div key={i} className="member-container">
-                <img src='' alt='contributor' className='member'/>
+                <img src={profilePic} alt='contributor' className='member'/>
               </div>
             )
           } else if (contributor[0].image) {
