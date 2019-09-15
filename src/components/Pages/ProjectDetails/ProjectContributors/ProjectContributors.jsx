@@ -7,8 +7,14 @@ const ProjectContributors = ({ contributors }) => (
     <h3>Members</h3>
     <div className='members'>
       {
-        contributors.slice(1).map((contributor) => {
-          if (contributor[0].image) {
+        contributors.map((contributor, i) => {
+          if (contributor.length === 0 || contributor[0].image === null) {
+            return (
+              <div key={i} className="member-container">
+                <img src='' alt='contributor' className='member'/>
+              </div>
+            )
+          } else if (contributor[0].image) {
           /** Image arrives as a binary array and need to be converted to string for
           display the image. However the binary includes metadatas like file name, size etc.
           In order to make compatible as image, need to convert to an object and take only
